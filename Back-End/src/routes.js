@@ -1,11 +1,9 @@
 const express = require('express');
 
-const quoteController = require("./controllers/quoteController");
-const companyController = require("./controllers/companyController");
+const companyStockController = require("./controllers/companyStockController");
 
 const routes = express.Router();
 
-routes.get("/quote/:symbol", quoteController.getQuoteBySymbol);
-routes.get("/company/:symbol", companyController.getCompanyDataBySymbol);
+routes.get("/companystock/:symbol", companyStockController.getCompanyStockController);
 
 module.exports = routes;
