@@ -47,7 +47,26 @@ const getQuoteBySymbol = async (symbol) => {
   );
 };
 
+const getQuoteBySymbolUpdade = async (symbol) => {
+  return iexClient.quote(symbol, {
+    filter: [
+      'latestPrice',
+      'latestUpdate',
+    ]
+  }).then(
+    (res) => {
+      console.log("Sucesso!", res);
+      return res;
+    },
+    (err) => {
+      console.error("Erro!", err);
+      return err;
+    }
+  );
+};
+
 module.exports = {
   getCompanyBySymbol,
-  getQuoteBySymbol
+  getQuoteBySymbol,
+  getQuoteBySymbolUpdade
 };

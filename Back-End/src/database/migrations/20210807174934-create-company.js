@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('companyes', {
+    await queryInterface.createTable('companies', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false,
       },
       latestPrice: {
-        type: Sequelize.STRING,
+        type: Sequelize.DECIMAL(10,2),
         allowNull: false,
       },
       latestUpdate: {
@@ -31,49 +31,49 @@ module.exports = {
       },
       website: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       employees: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       address: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       address2: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       state: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       city: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       zip: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       country: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       phone: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       description: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.TEXT,
+        allowNull: true,
       },
-      created_at: {
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      updated_at: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },
@@ -81,6 +81,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('companyes');
+    await queryInterface.dropTable('companies');
   }
 };
