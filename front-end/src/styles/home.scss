@@ -60,12 +60,10 @@
   }
 
   .error {
-    animation: opacity 2s ease-in-out infinite;
     background-color: #7b9e7f;
     border-radius: 20px;
     color: red;
     margin: 10px;
-    opacity: 1;
     padding: 10px;
     text-align: center;
 
@@ -109,11 +107,6 @@
         border-radius: 20px;
         margin: 5px;
         padding: 5px;
-      }
-
-      .latestPrice {
-        animation: opacity 5s ease-in-out infinite;
-        opacity: 5;
       }
     }
   }
