@@ -1,29 +1,15 @@
-import React, { useState } from "react";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
 
-export default function App() {
-  const [repository, setRepository] = useState([]);
-
-  async function handleCompany() {
-    try {
-      const response = await fetch('http://localhost:3001/companystock/GOOG')
-      // console.log('console log response', response);
-      const data = await response.json();
-      // console.log('console log data', data);
-      setRepository(data);
-
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  console.log('console log repository', repository);
-
+function App() {
   return (
     <div>
-      <button onClick={handleCompany}>
-        Buscar Empresa
-      </button>
+      <Switch>
+        <Route exact path="/" component={ Home } />
+      </Switch>
     </div>
   );
-
 }
 
+export default App;

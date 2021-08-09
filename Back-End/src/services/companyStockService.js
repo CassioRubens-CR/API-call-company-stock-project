@@ -14,16 +14,7 @@ const getCompanyBySymbol = async (symbol) => {
       'phone',
       'description',
     ]
-  }).then(
-    (res) => {
-      console.log("Secesso!", res);
-      return res;
-    },
-    (err) => {
-      console.error("Erro!", err);
-      return err;
-    }
-  );
+  })
 };
 
 const getQuoteBySymbol = async (symbol) => {
@@ -35,16 +26,7 @@ const getQuoteBySymbol = async (symbol) => {
       'latestUpdate',
       'currency'
     ]
-  }).then(
-    (res) => {
-      console.log("Sucesso!", res);
-      return res;
-    },
-    (err) => {
-      console.error("Erro!", err);
-      return err;
-    }
-  );
+  });
 };
 
 const getQuoteBySymbolUpdade = async (symbol) => {
@@ -53,16 +35,7 @@ const getQuoteBySymbolUpdade = async (symbol) => {
       'latestPrice',
       'latestUpdate',
     ]
-  }).then(
-    (res) => {
-      console.log("Sucesso!", res);
-      return res;
-    },
-    (err) => {
-      console.error("Erro!", err);
-      return err;
-    }
-  );
+  });
 };
 
 module.exports = {

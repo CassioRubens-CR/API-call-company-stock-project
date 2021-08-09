@@ -1,0 +1,22 @@
+#page-home {
+  height: 50vh;
+  width: 50vw;
+  margin: auto;
+  margin-top:20px;
+
+  .hearder {
+    text-align: center;
+    margin-top: 16px;
+    text-transform: uppercase;
+    border: groove;    
+  }
+
+  .inputAndButton {
+    text-align: center;
+  }
+
+  .formCompany {
+    border: groove; 
+    text-align: justify;
+  }
+}
