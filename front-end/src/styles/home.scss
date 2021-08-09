@@ -8,50 +8,48 @@
   width: 50vw;
 
   .hearder {
-    text-align: center;
-    border-radius: 20px;
-    text-transform: uppercase;
-    background-color: #06680d;
-    height: 50px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    color: #fff;
+    background-color: #06680d;
+    border-radius: 20px;
+    color: yellow;
+    display: flex;
     font-size: x-large;
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .inputAndButton {
-    text-align: -webkit-center;
+    background-color: #7b9e7f;
     margin: auto;
     padding: 16px;
-    background-color: #7b9e7f;
+    text-align: -webkit-center;
 
     #symbol {
+      border-radius: 12px;
+      display: flex;
       height: 25px;
       margin-top: 16px;
       text-align: center;
-      border-radius: 12px;
-      display: flex;
     }
 
     button {
+      align-items: center;
       background-image: linear-gradient(to right, #06680d 0%, #E7E9BB 51%, #06680d 100%);
+      background-size: 200% auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #eee;
+      display: flex;
+      color: black;
+      cursor: pointer;
       height: 50px;
+      justify-content: center;
       margin-top: 16px;
       padding: 0px 32px;
       text-align: center;
       text-transform: uppercase;
       transition: 0.5s;
-      background-size: 200% auto;
-      color: black;
-      box-shadow: 0 0 20px #eee;
-      border-radius: 12px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      cursor: pointer;
     }
 
     button:hover {
@@ -62,14 +60,14 @@
   }
 
   .error {
-    border-radius: 20px;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    background-color: #7b9e7f;
     animation: opacity 2s ease-in-out infinite;
-    opacity: 1;
+    background-color: #7b9e7f;
+    border-radius: 20px;
     color: red;
+    margin: 10px;
+    opacity: 1;
+    padding: 10px;
+    text-align: center;
 
     @keyframes opacity {
       0% {
@@ -87,11 +85,11 @@
   }
 
   .reportCompany {
-    text-align: justify;
     background-color: #7b9e7f;
     border-radius: 20px;
-    margin: 10px;
     color: blue;
+    margin: 10px;
+    text-align: justify;
 
     .fieldset {
       border-radius: 20px;
