@@ -1,22 +1,120 @@
 #page-home {
-  height: 50vh;
-  width: 50vw;
+  background-color: #7b9e7f; 
+  border: groove; 
+  border-radius: 20px;
   margin: auto;
   margin-top:20px;
+  padding-bottom: 16px;
+  width: 50vw;
 
   .hearder {
     text-align: center;
-    margin-top: 16px;
+    border-radius: 20px;
     text-transform: uppercase;
-    border: groove;    
+    background-color: #06680d; 
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: x-large;
   }
 
   .inputAndButton {
-    text-align: center;
+    text-align: -webkit-center;
+    margin: auto;
+    padding: 16px;
+    background-color: #7b9e7f; 
+
+    #symbol {
+      height: 25px;
+      margin-top: 16px;
+      text-align: center;
+      border-radius: 12px;
+      display: flex;
+    }
+  
+    button {
+      background-image: linear-gradient(to right, #06680d 0%, #E7E9BB  51%, #06680d  100%);
+      height: 50px;
+      margin-top: 16px;
+      padding: 0px 32px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: black;            
+      box-shadow: 0 0 20px #eee;
+      border-radius: 12px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
-  .formCompany {
-    border: groove; 
+  .error {
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: #7b9e7f;
+    animation: opacity 2s ease-in-out infinite;
+    opacity: 1;
+    color: red;
+
+    @keyframes opacity {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  .reportCompany {
     text-align: justify;
+    background-color: #7b9e7f;
+    border-radius: 20px;
+    margin: 10px;
+    color: blue;
+
+    .fieldset {
+      border-radius: 20px;
+      mix-blend-mode: color-burn;
+
+      legend {
+        font-family: “Segoe UI”,”Arial”,”Times New Roman”;
+        font-style:bold;
+      }
+
+      label {
+        font-style: italic;
+      }
+      
+      div {
+        border: groove;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .latestPrice {
+        animation: opacity 5s ease-in-out infinite;
+        opacity: 5;
+      }
+    }
   }
 }

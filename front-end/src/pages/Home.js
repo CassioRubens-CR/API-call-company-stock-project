@@ -19,59 +19,57 @@ export default function Home() {
       setRepository(data);
 
     } catch (error) {
-      console.log('console log error', error.response.data.message);
       setError(error?.response?.data?.message);
     }
   }
 
-  console.log('console log repository', repository);
-
   function handleInput() {
     const valueInput = document.getElementById('symbol');
-    console.log('value input', valueInput.value);
     setSymbol(valueInput.value);
   }
 
   return (
     <div id="page-home">
       <header className="hearder">Real Time Stocks</header>
+
       <div className="inputAndButton">
         <input
           type="text"
           id="symbol"
-          placeholder="Symbol Company"
+          placeholder="Sigla da Empresa"
           onChange={handleInput}
         />
         <button onClick={handleCompany}>
-          Search Company
+          Buscar Empresa
         </button>
       </div>
-      {/* <ul>
-        {repository && Object.entries(repository).map(([key, value]) => {
-          return (<li key={key}> {key + ' ' + value} </li>)
-        })}
-      </ul> */}
-      {/* {repository?.latestPrice} */}
-      <div className="formCompany">
-        <div>{repository?.companyName}</div>
-        <div>{repository?.symbol}</div>
-        <div>{repository?.latestPrice}</div>
-        <div>{repository?.latestUpdate}</div>
-        <div>{repository?.currency}</div>
-        <div>{repository?.employees}</div>
-        <div>{repository?.description}</div>
-        <div>{repository?.website}</div>
-        <div>{repository?.phone}</div>
-        <div>{repository?.address}</div>
-        <div>{repository?.address2}</div>
-        <div>{repository?.city}</div>
-        <div>{repository?.state}</div>
-        <div>{repository?.zip}</div>
-        <div>{repository?.country}</div>
-      </div>
-      {error}
+
+      {!repository && (
+        <div className="error">{error}</div>
+      )}
+
+      {repository && (
+        <div className="reportCompany">
+          <fieldset className="fieldset">
+            <legend>Empresa</legend>
+            <label>Nome:</label><div>{repository?.companyName}</div>
+            <label>Sigla:</label><div>{repository?.symbol}</div>
+            <label>Preço cotação mais recente:</label><div className="latestPrice">{repository?.latestPrice}</div>
+            <label>Moeda:</label><div>{repository?.currency}</div>
+            <label>Data última cotação:</label><div>{repository?.latestUpdate}</div>
+            <label>Funcionários(as):</label><div>{repository?.employees}</div>
+            <label>Website:</label><div>{repository?.website}</div>
+            <label>Telefone:</label><div>{repository?.phone}</div>
+            <label>Endereço:</label><div>{repository?.address}</div>
+            <label>Complemento:</label><div>{repository?.address2}</div>
+            <label>Cidade:</label><div>{repository?.city}</div>
+            <label>Estado:</label><div>{repository?.state}</div>
+            <label>CEP:</label><div>{repository?.zip}</div>
+            <label>País:</label><div>{repository?.country}</div>
+            <label>Descrição:</label><div>{repository?.description}</div>
+          </fieldset>
+        </div>
+      )}
     </div>
   );
-
 }
-
