@@ -9,6 +9,5 @@ module.exports = {
   database: process.env.MYSQL_SCHEMA,
   define: {
     timestamp: true,
-    // underscored: true,
   }
 }

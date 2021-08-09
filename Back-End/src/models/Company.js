@@ -5,7 +5,7 @@ class Company extends Model {
     super.init({
       symbol: DataTypes.STRING,
       companyName: DataTypes.STRING,
-      latestPrice: DataTypes.DECIMAL(10,2),
+      latestPrice: DataTypes.DECIMAL(10, 2),
       latestUpdate: DataTypes.DATE,
       currency: DataTypes.STRING,
       website: DataTypes.STRING,
