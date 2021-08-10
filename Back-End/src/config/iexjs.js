@@ -1,7 +1,8 @@
 const { Client } = require("iexjs");
+require('dotenv').config()
 
 const iexClient = new Client({
-  api_token: "pk_8948b7df14ea48059b9ed3b9c0495d29",
+  api_token: process.env.API_TOKEN_IEXJS,
   version: "stable",
 });
 
