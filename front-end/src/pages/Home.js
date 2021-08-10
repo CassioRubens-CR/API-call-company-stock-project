@@ -14,7 +14,7 @@ export default function Home() {
     setError();
 
     try {
-      const response = await axios.get(`http://localhost:3001/companystock/${symbol}`);
+      const response = await axios.get(`${process.env.REACT_APP_BASE_API_URL}/companystock/${symbol}`);
 
       const { data } = response;
       setRepository(data);
