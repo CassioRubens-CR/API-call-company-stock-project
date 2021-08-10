@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div id="page-home">
 
-      <header className="hearder">Real Time Stocks</header>
+      <header className="header">Realtime Stocks</header>
 
       <div className="inputAndButton">
         <input
