@@ -3,13 +3,27 @@ import '../styles/home.scss';
 
 function ReportCompany({ repository }) {
 
+  function updateDate () {
+    const updateDate = new Date(repository.latestUpdate);
+
+    const date = updateDate.getDate();
+
+    const month = updateDate.getMonth() + 1;
+
+    const year = updateDate.getFullYear();
+
+    const formatDate = `${date}/${month}/${year}`;
+
+    return formatDate;
+  }
+
   return (
     <div className="reportCompany">
       <fieldset className="fieldset">
         <legend>Cotação</legend>
         <label>Preço cotação mais recente:</label><div>{repository?.latestPrice}</div>
         <label>Moeda:</label><div>{repository?.currency}</div>
-        <label>Data última cotação:</label><div>{repository.latestUpdate}</div>
+        <label>Data última cotação:</label><div>{updateDate()}</div>
       </fieldset>
 
       <fieldset className="fieldset">
